@@ -15,6 +15,6 @@
 *	hasId: true|false, if true ,data and initValue should is [{name:.., id: ..}]	是否提供id，id存在时，名字可以不唯一
 *}
 *
-![image](https://github.com/dtimmer/slider/blob/master/cc.png)
+![image](https://github.com/dtimmer/select3/blob/master/cc.png)
 
-![image](https://github.com/dtimmer/slider/blob/master/dd.png)
+![image](https://github.com/dtimmer/select3/blob/master/dd.png)
