@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="libs/scrollbar/jquery.mCustomScrollbar.min.css"/>
+		<link rel="stylesheet" type="text/css" href="libs/select3/select3.css"/>
+		<script src="js/jquery-3.1.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="libs/scrollbar/jquery.mousewheel.js" type="text/javascript" charset="utf-8"></script>
+		<script src="libs/scrollbar/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="libs/scrollbar/jquery.mCustomScrollbar.concat.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/common.js" type="text/javascript" charset="utf-8"></script>
+		<script src="libs/select3/select3.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			* {
+				user-select: none;
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				-o-user-select: none;
+			}
+			html, body {
+				width: 100%;
+				height: 100%;
+			}
+			.select {
+				width: 210px;
+				height: 28px;
+				line-height: 26px;
+			}
+			.select3_input {
+				font-size: 16px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="select" class="select">
+		</div>
+		<div id="select2" class="select">
+		</div>
+		<script type="text/javascript">
+			var option = {
+				type: 'check',	//check or radio
+				initValue: '123,234,qeqwefas'.split(','),	//init value
+				value: ['123', '234', '345', '456', '778', 'qweq', 'qeqwefa1231231231232112312311111111111111s'],	//select values
+				max: 4,	//max slected,
+				callback: function(params) {
+					console.log(params)
+				}
+			}
+			var select = select3.init(document.getElementById('select'));
+			select.setOption(option);
+			var option2 = {
+				type: 'radio',	//check or radio
+				initValue: '123',	//init value
+				value: ['123', '234', '345', '456', '778', 'qweq', 'qeqwefa1231231231232112312311111111111111s'],	//select values
+				callback: function(params) {
+					console.log(params)
+				},
+				autoClose: true
+			}
+			var select2 = select3.init(document.getElementById('select2'));
+			select2.setOption(option2);
+		</script>
+	</body>
+</html>

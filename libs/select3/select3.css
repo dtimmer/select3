@@ -1,0 +1,127 @@
+.select3_input {
+	width: 100%;
+	height: 100%;
+	background: #FFFFFF;
+	border: 1px solid #cccccc;
+	outline: none;
+	box-sizing: border-box;
+	padding-left: 0.1rem;
+	padding-right: 0.3rem;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	position: absolute;
+	background: url(down.png) no-repeat right center / 0.26rem 0.26rem;
+}
+
+.select3_input.show {
+	background: url(up.png) no-repeat right center / 0.26rem 0.26rem;
+}
+
+.select3_options {
+	width: 100%;
+	height: 0;
+	overflow: auto;
+	position: absolute;
+	top: 100%;
+	background: #FFFFFF;
+}
+
+.select3_scroll {
+	max-height: 1.8rem;
+	/*height: 1.8rem;*/
+	width: 100%;
+	box-sizing: border-box;
+	border: 1px solid #cccccc;
+	border-top-width: 0;
+}
+
+.select3_options.show {
+	height: auto;
+}
+
+.select3_options ul {
+	margin: 0;
+	list-style: none;
+	padding: 0;
+	line-height: 0.36rem;
+	color: #36383c;
+	font-size: 0.14rem;
+	float: left;
+	min-width: 100%;
+}
+
+.select3_options ul li {
+	padding: 0 0.15rem;
+	cursor: pointer;
+	white-space: nowrap;
+	height: 0.36rem;
+}
+
+.select3_options ul li:hover {
+	background-color: #2d99f3;
+	color: #FFFFFF;
+}
+
+.checks.select3_options ul li {
+	padding-left: 0.4rem;
+	background-image: url(select_check.png);
+	background-repeat:  no-repeat;
+	background-position: 0.15rem center;
+	background-size: 0.14rem 0.14rem;
+}
+
+.checks.select3_options ul li.sel {
+	background-image: url(select_checked.png);
+}
+
+.select3_scroll .mCSB_container_wrapper {
+	margin-right: 0.1rem;
+	margin-bottom: 0.1rem;
+}
+
+.select3_scroll .mCSB_container_wrapper>.mCSB_container {
+	padding-right: 0.1rem;
+	padding-bottom: 0.1rem;
+	padding: 0;
+}
+
+.select3_scroll .mCSB_container_wrapper.mCS_no_scrollbar_x.mCS_x_hidden>.mCSB_container {
+	padding-right: 0;
+}
+
+.mCustomScrollbar .mCSB_scrollTools_horizontal {
+    height: 0.1rem;
+    right: 0.1rem !important;
+}
+
+.mCustomScrollbar .mCSB_scrollTools_vertical {
+    width: 0.1rem;
+    bottom: 0.1rem !important;
+}
+
+.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar {
+    margin: 0;
+}
+
+.mCustomScrollbar .mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar {
+    background: #d5dae3;
+    height: 0.06rem;
+}
+
+.mCustomScrollbar .mCSB_draggerRail {
+    background: #fff;
+}
+
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    background: #d5dae3;
+    width: 0.06rem;
+}
+
+.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar, .mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar {
+    background: #d5dae3;
+}
+
+.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+    background: #d5dae3;
+}
