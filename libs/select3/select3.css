@@ -38,6 +38,7 @@
 
 .select3_options.show {
 	height: auto;
+	z-index: 9;
 }
 
 .select3_options ul {

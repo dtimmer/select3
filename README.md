@@ -1,4 +1,4 @@
-# select3
+﻿# select3
 
 自定义select插件，滚动条使用scrollbar插件，依赖jquery，提供单选以及多选功能，同时通过回调获取选项，多选返回逗号分隔的字符串
 
@@ -14,3 +14,7 @@
 *	hasAll: true|false,	是否有all选项，默认为false
 *	hasId: true|false, if true ,data and initValue should is [{name:.., id: ..}]	是否提供id，id存在时，名字可以不唯一
 *}
+*
+![image](https://github.com/dtimmer/slider/blob/master/cc.png)
+
+![image](https://github.com/dtimmer/slider/blob/master/dd.png)
