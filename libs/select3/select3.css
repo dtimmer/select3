@@ -126,3 +126,11 @@
 .mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
     background: #d5dae3;
 }
+
+.select_clear {
+	position: absolute;
+	display: block;
+	font-size: 0.15rem;
+	right: 0.25rem;
+	cursor: pointer;
+}

@@ -12,7 +12,7 @@ function Select3(dom) {
 		'<div class="select3_scroll">' +
 		'<ul></ul>' +
 		'</div>' +
-		'</div>';
+		'</div>' + '<div style="display: none;" class="select_clear">x</div>';
 	this.oldValue = null;
 }
 
@@ -28,6 +28,9 @@ Select3.prototype.setOption = function(option) {
 		throw new Error('option should have true values!');
 	}
 	$(this._dom).append($(this.childNode));
+	if(option.hasClear) {
+		$(this._dom).find('.select_clear').show();
+	}
 	if(option.hasAll) {
 		$(_this._dom).find('ul').append($(`<li class="all" title="ALL">ALL</li>`));
 	}
@@ -152,12 +155,16 @@ Select3.prototype.setOption = function(option) {
 					_this.oldValue = select_value;
 				}
 			}
-//			$('.select3_options').removeClass('show');
-//			$('.select3_input').removeClass('show');
 			$(_this._dom).find('.select3_options').addClass('show');
 			$(_this._dom).find('.select3_input').addClass('show');
 		}
 	});
+	$(this._dom).on('click', '.select_clear', function() {
+		if(option.type == 'check') {
+			$(_this._dom).find('.child_li.sel').click();
+		}
+	});
+	
 	$(this._dom).on('click', 'li.child_li', function(e) {
 		e.stopPropagation();
 		if (option.type == 'radio') {
@@ -309,4 +316,5 @@ window.select3 = {
 //	isImg: value is some img has data-name to save this name
 //	hasAll: true|false,
 //	hasId: true|false, if true ,data and initValue should is [{name:.., id: ..}]
+//	hasClear: true|false, if true, add x to clear all select
 //}
